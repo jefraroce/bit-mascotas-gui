@@ -1,0 +1,23 @@
+<div class="row my-5">
+  <div class="col-12">
+    <div class="d-flex">
+      <input type="text" class="form-control" placeholder="Escribe el nombre de tu mascota..." />
+      <button class="btn btn-primary">
+        <span class="material-icons me-2">search</span>
+        Buscar
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div *ngFor="let perro of perros" class="col-12 col-md-4 mb-5">
+    <div class="pet-card">
+      <figure>
+        <img src="assets/images/perro.jpg" alt="" />
+      </figure>
+      <h3><a class="text-primary" [routerLink]="['/pet', perro._id]"><span class="material-icons">visibility</span></a> {{ perro.nombre | lowerUpperCase }}</h3>
+      <span>Raza: {{ perro.raza }}</span>
+    </div>
+  </div>
+</div>

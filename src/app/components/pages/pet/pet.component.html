@@ -1,0 +1,29 @@
+<div class="row my-5">
+  <div class="col-12 col-md-7">
+    <figure>
+      <img src="assets/images/perro.jpg" alt="" />
+    </figure>
+  </div>
+  <div class="col-12 col-md-5">
+    <div class="d-flex flex-column justify-content-between h-100">
+      <div class="d-flex flex-column">
+        <h1>{{ perro.nombre | lowerUpperCase }}</h1>
+        <h5>Raza</h5>
+        <span>{{ perro.raza }}</span>
+        <h5>Edad</h5>
+        <span>{{ perro.edad }}</span>
+        <h5>¿Come Carne?</h5>
+        <span>{{ perro.comeCarne ? '¡Claro que sí!' : '¡Por supuesto que no!' }}</span>
+
+        <!-- Pipes -->
+        <h2>{{ 50000 | currency }}</h2>
+      </div>
+
+      <div>
+        <a routerLink="/home" class="btn btn-primary">
+          <span class="material-icons me-2">arrow_back</span>
+        Volver al Inicio</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+$theme-colors: (
+  'primary': #7C4DFF,
+  'secondary': #CDDC39,
+  'dark': #707070
+);
+
+@import 'bootstrap';
+
+.btn {
+  display: flex;
+  align-items: center;
+}
